@@ -16,20 +16,28 @@
     <script src="assets/js/burgermenu.js" defer></script>
 </head>
 <body>
+    <div id="menuList">
+        <ul>
+            <li><a href="" data-direction="front">Home</a></li>
+            <li><a href="" data-direction="back">Portfolio</a></li>
+            <li><a href="" data-direction="top">About</a></li>
+            <li><a href="" data-direction="right">Contact</a></li>
+        </ul>
+    </div>
     <header>
         <nav class="text-center">
           <ul class="inline-block">
             <li class="pull-left active"><a href="#" data-direction="front">Home</a></li>
             <li class="pull-left"><a href="#" data-direction="back">Portfolio</a></li>
             <li class="pull-left"><a href="#" data-direction="top">About</a></li>
-            <li class="pull-left"><a href="#">Contact</a></li>
+            <li class="pull-left"><a href="#" data-direction="right">Contact</a></li>
             <div class="clearfix"></div>
           </ul>
         </nav>
-        <div id="burgerIcon">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div id="burgerIcon"> 
+            <span id="bgm-1"></span>
+            <span id="bgm-2"></span>
+            <span id="bgm-3"></span>
         </div>
       </header>
       <div id="wrap">
