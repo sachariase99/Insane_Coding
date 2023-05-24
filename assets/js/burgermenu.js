@@ -2,7 +2,8 @@
 const burgerIcon = document.getElementById('burgerIcon'); // Burger-ikonet
 const menuList = document.getElementById('menuList'); // Menu-listen
 const nav = document.querySelector('nav'); // <nav> elementet
-const container = document.getElementById('container'); // Container-elementet
+const homeImageContainer = document.getElementById('homeImageContainer')
+const flipContainer = document.getElementById('flipContainer'); // Container-elementet
 const actTableCell = document.getElementsByClassName('act-table-cell'); // Elementer med klassen 'act-table-cell'
 const menuItems = menuList.querySelectorAll('li'); // Henter alle LI elementer inde i menuList
 
@@ -15,7 +16,8 @@ const bgm3 = document.getElementById('bgm-3');
 burgerIcon.addEventListener('click', () => {
     menuList.classList.toggle('active');
     nav.classList.toggle('active');
-    container.classList.toggle('active');
+    homeImageContainer.classList.toggle('active');
+    flipContainer.classList.toggle('active');
     bgm1.classList.toggle('active');
     bgm2.classList.toggle('active');
     bgm3.classList.toggle('active');
@@ -31,7 +33,8 @@ for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener('click', () => {
         menuList.classList.remove('active');
         nav.classList.remove('active');
-        container.classList.remove('active');
+        homeImageContainer.classList.toggle('active');
+        flipContainer.classList.remove('active');
         bgm1.classList.remove('active');
         bgm2.classList.remove('active');
         bgm3.classList.remove('active');

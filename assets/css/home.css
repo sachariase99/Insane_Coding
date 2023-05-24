@@ -1,0 +1,17 @@
+#homeImageContainer {
+    position: relative;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#homeImageContainer img {
+    width: 100%;
+    border-radius: 20px;
+    filter:brightness(70%)
+}
+
+#homeImageContainer.active {
+    display: none;
+}

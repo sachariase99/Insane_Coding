@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <!-- CSS LINKING -->
-    <link rel="stylesheet" href="assets/css/animated_Text.css">
-    <link rel="stylesheet" href="assets/css/rotating_Site.css">
-    <link rel="stylesheet" href="assets/css/burgermenu.css">
 
-    <!-- SCRIPT LINKING -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="module" src="assets/js/rotating_Site.js" defer></script>
-    <script src="assets/js/burgermenu.js" defer></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- CSS LINKING -->
+  <!-- ANIMATED TEXT -->
+  <link rel="stylesheet" href="assets/css/animated_Text.css">
+  <!-- ROTATING SITE -->
+  <link rel="stylesheet" href="assets/css/rotating_Site.css">
+  <!-- BURGERMENU -->
+  <link rel="stylesheet" href="assets/css/burgermenu.css">
+  <!-- HOME PAGE -->
+  <link rel="stylesheet" href="assets/css/home.css">
+
+  <!-- SCRIPT LINKING -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src="assets/js/rotating_Site.js" defer></script>
+  <script src="assets/js/burgermenu.js" defer></script>
 </head>
+
 <body>
-    <div id="menuList">
-        <ul>
-            <li><a href="" data-direction="front">Home</a></li>
-            <li><a href="" data-direction="back">Portfolio</a></li>
-            <li><a href="" data-direction="top">About</a></li>
-            <li><a href="" data-direction="right">Contact</a></li>
-        </ul>
+  <div id="menuList">
+    <ul>
+      <li><a href="" data-direction="front">Home</a></li>
+      <li><a href="" data-direction="back">Portfolio</a></li>
+      <li><a href="" data-direction="top">About</a></li>
+      <li><a href="" data-direction="right">Contact</a></li>
+    </ul>
+  </div>
+  <header>
+    <nav class="text-center">
+      <ul class="inline-block">
+        <li class="pull-left active"><a href="#" data-direction="front">Home</a></li>
+        <li class="pull-left"><a href="#" data-direction="back">Portfolio</a></li>
+        <li class="pull-left"><a href="#" data-direction="top">About</a></li>
+        <li class="pull-left"><a href="#" data-direction="right">Contact</a></li>
+        <div class="clearfix"></div>
+      </ul>
+    </nav>
+    <div id="burgerIcon">
+      <span id="bgm-1"></span>
+      <span id="bgm-2"></span>
+      <span id="bgm-3"></span>
     </div>
-    <header>
-        <nav class="text-center">
-          <ul class="inline-block">
-            <li class="pull-left active"><a href="#" data-direction="front">Home</a></li>
-            <li class="pull-left"><a href="#" data-direction="back">Portfolio</a></li>
-            <li class="pull-left"><a href="#" data-direction="top">About</a></li>
-            <li class="pull-left"><a href="#" data-direction="right">Contact</a></li>
-            <div class="clearfix"></div>
-          </ul>
-        </nav>
-        <div id="burgerIcon"> 
-            <span id="bgm-1"></span>
-            <span id="bgm-2"></span>
-            <span id="bgm-3"></span>
+  </header>
+  <div id="wrap">
+    <div class="cube">
+      <section class="page active face front" id="home">
+        <div class="act-table text-center">
+          <!-- <div class="act-table-cell ver-middle"></div> -->
+
+          <div id="homeImageContainer">
+            <img src="assets/images/office.jpg" alt="">
+          </div>
+
+          <div id="flipContainer">
+            Make
+            <div id="flip">
+              <div>
+                <div>Work</div>
+              </div>
+              <div>
+                <div>Lifestyle</div>
+              </div>
+              <div>
+                <div>Everything</div>
+              </div>
+            </div>
+            Awesome!
+          </div>
         </div>
-      </header>
-      <div id="wrap">
-        <div class="cube">
-          <section class="page active face front" id="home">
-            <div class="act-table text-center">
-              <!-- <div class="act-table-cell ver-middle">Home Page</div> -->
-              <div id="container">
-                Make
-                <div id="flip">
-                    <div>
-                        <div>Work</div>
-                    </div>
-                    <div>
-                        <div>Lifestyle</div>
-                    </div>
-                    <div>
-                        <div>Everything</div>
-                    </div>
-                </div>
-                Awesome!
-            </div>
-            </div>
-          </section>
-          <section class="page face back" id="portfolio">
-            <div class="act-table text-center">
-              <div class="act-table-cell ver-middle">Portfolio Page</div>
-            </div>
-          </section>
-          <section class="page face top" id="about">
-            <div class="act-table text-center">
-              <div class="act-table-cell ver-middle">about Page</div>
-            </div>
-          </section>
-          <section class="page face right" id="contact">
-            <div class="act-table text-center">
-              <div class="act-table-cell ver-middle">contact Page</div>
-            </div>
-          </section>
+      </section>
+      <section class="page face back" id="portfolio">
+        <div class="act-table text-center">
+          <div class="act-table-cell ver-middle">Portfolio Page</div>
         </div>
-      </div>
+      </section>
+      <section class="page face top" id="about">
+        <div class="act-table text-center">
+          <div class="act-table-cell ver-middle">about Page</div>
+        </div>
+      </section>
+      <section class="page face right" id="contact">
+        <div class="act-table text-center">
+          <div class="act-table-cell ver-middle">contact Page</div>
+        </div>
+      </section>
+    </div>
+  </div>
 </body>
+
 </html>

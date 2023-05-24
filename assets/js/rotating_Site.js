@@ -11,6 +11,7 @@
 			var pageDirection = ''; // Initialiser variabel for retning på siden
 			var thisElement; // Deklarer variabel for det aktuelle element
 			var timeout; // Deklarer variabel for timeout
+			var pageTitle = ''; // Deklarer variabel for sidens navn
 
 			// Hændelsesbehandler for $header.find('nav li a')
 			$header.find('nav li a').click(function (event) {
@@ -28,7 +29,12 @@
 				timeout = setTimeout(function () {
 					$header.removeClass('go-out'); // Fjern klasse for at sende header ud
 					$('#wrap').removeClass('active'); // Fjern aktiv klasse fra wrap-elementet
-				}, 1000);
+					
+					// Update the page title
+					document.title = pageTitle;
+				  }, 1000);
+
+				pageTitle = thisElement.text(); // Set the page title to the clicked element's text
 			});
 
 			// Hændelsesbehandler for #menuList li a
@@ -50,9 +56,14 @@
 				timeout = setTimeout(function () {
 					$header.removeClass('go-out'); // Fjern klasse for at sende header ud
 					$('#wrap').removeClass('active'); // Fjern aktiv klasse fra wrap-elementet
-				}, 1000);
+					
+					// Update the page title
+					document.title = pageTitle;
+				  }, 1000);
 
 				$headerNavItem.parent().addClass('active').siblings().removeClass('active'); // Tilføj aktiv klasse til header-elementet og fjern fra søskende
+
+				pageTitle = thisElement.text(); // Set the page title to the clicked element's text
 			});
 		}
 
