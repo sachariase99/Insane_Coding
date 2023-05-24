@@ -1,0 +1,20 @@
+#burgerIcon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#burgerIcon span {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    margin: 5px 0 0 0;
+}
+
+nav.active {
+    display: none;
+}
