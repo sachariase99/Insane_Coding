@@ -1,58 +1,58 @@
 (function (document, window, $) {
 	$(document).ready(function () {
 		// Variables
-		var windowWidth = $(window).width(),
-			windowHeight = $(window).height(),
-			$header = $('header'),
-			reverseDirection; // Declare reverseDirection variable
+		var windowWidth = $(window).width(), // Bredden på vinduet
+			windowHeight = $(window).height(), // Højden på vinduet
+			$header = $('header'), // Header-elementet
+			reverseDirection; // Variabel til at holde styr på omvendt retning
 
 		// header anchor tags
 		function headerAnchors() {
-			var pageDirection = ''; // Initialize pageDirection variable
-			var thisElement; // Declare thisElement variable
-			var timeout; // Declare timeout variable
+			var pageDirection = ''; // Initialiser variabel for retning på siden
+			var thisElement; // Deklarer variabel for det aktuelle element
+			var timeout; // Deklarer variabel for timeout
 
-			// Event handler for $header.find('nav li a')
+			// Hændelsesbehandler for $header.find('nav li a')
 			$header.find('nav li a').click(function (event) {
 				event.preventDefault();
-				$('.cube').removeClass('reverse-' + pageDirection);
+				$('.cube').removeClass('reverse-' + pageDirection); // Fjerner omvendt retning på kube
 				thisElement = $(this);
-				pageDirection = thisElement.data('direction');
-				reverseDirection = thisElement.data('reverse-direction');
-				thisElement.parent().addClass('active').siblings().removeClass('active');
-				$('.cube').addClass('reverse-' + pageDirection);
+				pageDirection = thisElement.data('direction'); // Hent retningen for det aktuelle element
+				reverseDirection = thisElement.data('reverse-direction'); // Hent omvendt retning for det aktuelle element
+				thisElement.parent().addClass('active').siblings().removeClass('active'); // Tilføj aktiv klasse til det aktuelle element og fjern fra søskende
+				$('.cube').addClass('reverse-' + pageDirection); // Tilføj omvendt retning på kube
 
-				$header.addClass('go-out');
-				$('#wrap').addClass('active');
+				$header.addClass('go-out'); // Tilføj klasse for at sende header ud
+				$('#wrap').addClass('active'); // Tilføj aktiv klasse til wrap-elementet
 				clearTimeout(timeout);
 				timeout = setTimeout(function () {
-					$header.removeClass('go-out');
-					$('#wrap').removeClass('active');
+					$header.removeClass('go-out'); // Fjern klasse for at sende header ud
+					$('#wrap').removeClass('active'); // Fjern aktiv klasse fra wrap-elementet
 				}, 1000);
 			});
 
-			// Event handler for #menuList li a
+			// Hændelsesbehandler for #menuList li a
 			$('#menuList li a').click(function (event) {
 				event.preventDefault();
-				var targetDirection = $(this).data('direction');
-				var $headerNavItem = $header.find('nav li a[data-direction="' + targetDirection + '"]');
+				var targetDirection = $(this).data('direction'); // Hent retningen for det aktuelle element
+				var $headerNavItem = $header.find('nav li a[data-direction="' + targetDirection + '"]'); // Find header-elementet med samme retning
 
-				$('.cube').removeClass('reverse-' + pageDirection);
+				$('.cube').removeClass('reverse-' + pageDirection); // Fjerner omvendt retning på kube
 				thisElement = $(this);
-				pageDirection = thisElement.data('direction');
-				reverseDirection = thisElement.data('reverse-direction');
-				thisElement.parent().addClass('active').siblings().removeClass('active');
-				$('.cube').addClass('reverse-' + pageDirection);
+				pageDirection = thisElement.data('direction'); // Hent retningen for det aktuelle element
+				reverseDirection = thisElement.data('reverse-direction'); // Hent omvendt retning for det aktuelle element
+				thisElement.parent().addClass('active').siblings().removeClass('active'); // Tilføj aktiv klasse til det aktuelle element og fjern fra søskende
+				$('.cube').addClass('reverse-' + pageDirection); // Tilføj omvendt retning på kube
 
-				$header.addClass('go-out');
-				$('#wrap').addClass('active');
+				$header.addClass('go-out'); // Tilføj klasse for at sende header ud
+				$('#wrap').addClass('active'); // Tilføj aktiv klasse til wrap-elementet
 				clearTimeout(timeout);
 				timeout = setTimeout(function () {
-					$header.removeClass('go-out');
-					$('#wrap').removeClass('active');
+					$header.removeClass('go-out'); // Fjern klasse for at sende header ud
+					$('#wrap').removeClass('active'); // Fjern aktiv klasse fra wrap-elementet
 				}, 1000);
 
-				$headerNavItem.parent().addClass('active').siblings().removeClass('active');
+				$headerNavItem.parent().addClass('active').siblings().removeClass('active'); // Tilføj aktiv klasse til header-elementet og fjern fra søskende
 			});
 		}
 
@@ -60,8 +60,8 @@
 
 		$(window).resize(function () {
 			// Vars
-			windowWidth = $(window).width();
-			windowHeight = $(window).height();
+			windowWidth = $(window).width(); // Opdater bredden på vinduet
+			windowHeight = $(window).height(); // Opdater højden på vinduet
 			// Functions
 		});
 	});
